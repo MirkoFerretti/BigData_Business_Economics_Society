@@ -1,0 +1,3 @@
+model,stocks,stocks_improved,stocks_worsened,stocks_unchanged,mean_MSE_improvement_pct,median_MSE_improvement_pct,minimum_MSE_improvement_pct,maximum_MSE_improvement_pct,validation_test_sign_agreement_count
+B,12,6,6,0,-0.0731352122639715,0.019772758339818793,-1.3600510736358442,0.5626751849918032,6
+S,12,7,5,0,-0.11308443882733621,0.05571564624882886,-1.7152272888454463,0.4420346349306586,7

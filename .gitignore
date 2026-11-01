@@ -1,0 +1,99 @@
+# Local Python environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches and local tooling artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.matplotlib/
+_archive/
+
+# Local development guidance and decision history; final specification is PROJECT.md.
+/AGENTS.md
+/DECISIONS.md
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating-system files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Data: retain directory placeholders
+/data/raw/**
+!/data/raw/**/
+!/data/raw/**/.gitkeep
+# Frozen source snapshot may be tracked; downloader cookies/CA caches may not.
+!/data/raw/NVDA.csv
+!/data/raw/AAPL.csv
+!/data/raw/BRK.B.csv
+!/data/raw/JPM.csv
+!/data/raw/LLY.csv
+!/data/raw/JNJ.csv
+!/data/raw/AMZN.csv
+!/data/raw/TSLA.csv
+!/data/raw/CAT.csv
+!/data/raw/GE.csv
+!/data/raw/XOM.csv
+!/data/raw/CVX.csv
+!/data/raw/README.md
+!/data/raw/SHA256SUMS.txt
+/data/raw/.yfinance_cache/
+/data/processed/**
+!/data/processed/**/
+!/data/processed/**/.gitkeep
+
+# Generated outputs: retain directory placeholders
+/outputs/**
+!/outputs/**/
+!/outputs/**/.gitkeep
+
+# Professor-facing current results; development traces/galleries remain ignored.
+!/outputs/final_2025_stock_specific_volume_report.md
+!/outputs/tables/stock_specific_volume_model_selection.csv
+!/outputs/tables/final_2025_stock_specific_volume_forecasts.csv
+!/outputs/tables/final_2025_stock_specific_volume_metrics.csv
+!/outputs/tables/final_2025_stock_specific_volume_comparison.csv
+!/outputs/tables/final_2025_stock_specific_volume_cross_stock_summary.csv
+!/outputs/tables/final_2025_stock_specific_volume_training_counts.csv
+!/outputs/tables/final_2025_stock_specific_volume_integrity.json
+!/outputs/figures/final_2025_stock_specific_volume/model_b_mse_improvement.png
+!/outputs/figures/final_2025_stock_specific_volume/model_s_mse_improvement.png
+!/outputs/figures/final_2025_stock_specific_volume/validation_vs_test.png
+!/outputs/report/README.md
+!/outputs/report/figures/eda_*.png
+!/outputs/report/tables/eda_stock_descriptive_statistics.csv
+
+# Compact selection, diagnostic and robustness evidence used by the report.
+!/outputs/tables/model_a_validation_metrics.csv
+!/outputs/tables/model_a_feature_validation_metrics.csv
+!/outputs/tables/model_b_validation_metrics.csv
+!/outputs/tables/model_b_share_volume_validation_metrics.csv
+!/outputs/tables/model_a_acf_pacf.csv
+!/outputs/tables/model_a_return_diagnostics.csv
+!/outputs/tables/model_a_phase2_comparison.csv
+!/outputs/tables/model_b_brkb_sensitivity_summary.csv
+!/outputs/figures/model_b_robustness/brkb_sensitivity.png

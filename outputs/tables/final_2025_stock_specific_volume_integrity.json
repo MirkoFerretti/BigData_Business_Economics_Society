@@ -1,0 +1,407 @@
+{
+  "status": "primary stock-specific final evaluation under D021; historical D019 specification superseded",
+  "chronology_note": "Stock-specific comparison followed an earlier 2025 evaluation; no claim of preregistration or an unseen holdout",
+  "selection_inputs": [
+    "outputs/tables/model_b_validation_metrics.csv",
+    "outputs/tables/model_b_share_volume_validation_metrics.csv"
+  ],
+  "selection_rule": "minimum saved 2023-2024 MSE among 1,2,3; exact ties prefer lower complexity",
+  "selection_before_test_loading": true,
+  "expected_mapping_matched": true,
+  "frozen_model_a": {
+    "NVDA": "A0",
+    "AAPL": "A0",
+    "BRK.B": "A0",
+    "JPM": "AR(9)",
+    "LLY": "A0",
+    "JNJ": "A0",
+    "AMZN": "A3",
+    "TSLA": "A3",
+    "CAT": "AR(9)",
+    "GE": "AR(9)",
+    "XOM": "A0",
+    "CVX": "A0"
+  },
+  "selected_specifications": {
+    "NVDA": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    },
+    "AAPL": {
+      "A": "A0",
+      "B": "B2",
+      "S": "S2"
+    },
+    "BRK.B": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    },
+    "JPM": {
+      "A": "AR(9)",
+      "B": "B1",
+      "S": "S1"
+    },
+    "LLY": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    },
+    "JNJ": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    },
+    "AMZN": {
+      "A": "A3",
+      "B": "B1",
+      "S": "S1"
+    },
+    "TSLA": {
+      "A": "A3",
+      "B": "B3",
+      "S": "S3"
+    },
+    "CAT": {
+      "A": "AR(9)",
+      "B": "B1",
+      "S": "S1"
+    },
+    "GE": {
+      "A": "AR(9)",
+      "B": "B1",
+      "S": "S1"
+    },
+    "XOM": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    },
+    "CVX": {
+      "A": "A0",
+      "B": "B1",
+      "S": "S1"
+    }
+  },
+  "predictors": {
+    "NVDA": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    },
+    "AAPL": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20",
+        "DollarVolumeChange1"
+      ],
+      "S": [
+        "AbnormalShareVolume20",
+        "ShareVolumeChange1"
+      ]
+    },
+    "BRK.B": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    },
+    "JPM": {
+      "A": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9"
+      ],
+      "B": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalShareVolume20"
+      ]
+    },
+    "LLY": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    },
+    "JNJ": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    },
+    "AMZN": {
+      "A": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn"
+      ],
+      "B": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn",
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn",
+        "AbnormalShareVolume20"
+      ]
+    },
+    "TSLA": {
+      "A": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn"
+      ],
+      "B": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn",
+        "AbnormalDollarVolume20",
+        "DollarVolumeChange1",
+        "DollarVolumePersistence5"
+      ],
+      "S": [
+        "LastReturn",
+        "Prior4DayReturn",
+        "Prior15DayReturn",
+        "AbsLastReturn",
+        "AbnormalShareVolume20",
+        "ShareVolumeChange1",
+        "ShareVolumePersistence5"
+      ]
+    },
+    "CAT": {
+      "A": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9"
+      ],
+      "B": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalShareVolume20"
+      ]
+    },
+    "GE": {
+      "A": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9"
+      ],
+      "B": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "ReturnLag1",
+        "ReturnLag2",
+        "ReturnLag3",
+        "ReturnLag4",
+        "ReturnLag5",
+        "ReturnLag6",
+        "ReturnLag7",
+        "ReturnLag8",
+        "ReturnLag9",
+        "AbnormalShareVolume20"
+      ]
+    },
+    "XOM": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    },
+    "CVX": {
+      "A": [],
+      "B": [
+        "AbnormalDollarVolume20"
+      ],
+      "S": [
+        "AbnormalShareVolume20"
+      ]
+    }
+  },
+  "identical_actual_fit_indices_checked_at_every_origin": true,
+  "outcome_poisoning_prefix_and_subsequent_fit_checks_passed": true,
+  "exact_forecast_recomputation_passed": true,
+  "stored_features_verified_against_original_builders": true,
+  "protected_files_unchanged": true,
+  "protected_file_sha256": {
+    "AGENTS.md": "3c87273f7227f54b92cc4f4caec7483dc4173f53aed1517d665b7cc01a6950e4",
+    "config/model_a_frozen.csv": "4a0875318698368d93e93f0893059f8b5cef01cf8dae1676476dfbb394b92eda",
+    "config/universe.csv": "bc3d2702062f2d0112462bac12fe56343be5df7dca437cb652ae55fd7957f5b1",
+    "data/processed/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/processed/market_daily.csv": "a9b5818a322d809f476069cb5589825268968cd45c7420104e07a2f37f25fa12",
+    "data/processed/model_a_features.csv": "5c2a3e4e8c06dc6b25804b47750679373427163d614cf2c2a530ac890bf23e8b",
+    "data/processed/model_b_features.csv": "ad530c5a2f6b72e99d4b16404c28c82124c797df5c5706f900602bc905e4eb69",
+    "data/processed/model_b_share_volume_features.csv": "41458a545b24b818cae373179528e936840a047c239bc9e26ef14ad76d22c36d",
+    "data/raw/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/raw/AAPL.csv": "448fec1bf39130b3a6dffce72ef88a016ce2c0382a9f1d9a6cba033d3e144b13",
+    "data/raw/AMZN.csv": "46540f47191c36c4f1c6013b3b2452352a1f7fc3bbbd2491ed4ac868ba725045",
+    "data/raw/BRK.B.csv": "c25e869e3babbf257487768585ddb10c6c843a4ca17a3cad940eb362a4c38b4e",
+    "data/raw/CAT.csv": "5ec757400ac6af6e0a164c5048355efa4788f9c8050fccd6ede66929fb026c0c",
+    "data/raw/CVX.csv": "0b6d855991288ce6d719c949b401dac103b2f65a8a60495b58edf56b3d52de63",
+    "data/raw/GE.csv": "4ad9670976dbab1367992a6f4f88dc17466d1de2847d2c4aa3c4b1287c8d3f3c",
+    "data/raw/JNJ.csv": "7903007b37c182abf8472b9653097633a4b21ddb96c73b4da1c6c52174cb9a06",
+    "data/raw/JPM.csv": "1657fa062599ec0edd178f9c6eee659fad6fd66e05e2c19425542eead76aa227",
+    "data/raw/LLY.csv": "08f56aa1a39e20f6a32c9d0e2ee1c719cb925b84c8aa0b7919aa50885f0a87c6",
+    "data/raw/NVDA.csv": "e5a38a2c86007c22f1c088f0517a4059a9cd08237f4d9fe6e5b35e1a7edfb217",
+    "data/raw/README.md": "b1ca74bf16f93331ac64b8845d8493c05d6f9d946e5859d630a04bb6b111464e",
+    "data/raw/SHA256SUMS.txt": "dac091e9e37af86c9ef0c3d71af8c79b28e33bf9d93e6c54ca4cc2218a00942d",
+    "data/raw/TSLA.csv": "153885e5027076f7e32b228ed69ce206f187f1179bbc83477d81680a06151725",
+    "data/raw/XOM.csv": "6d6400f597d11585c4588beeacb56b2a18fdf776e9b9739235b883247e490c54",
+    "DECISIONS.md": "8ca916378f485e317f7056f3eeb60e68f125b2b23f97a0abe1795c4aa38039c9",
+    "outputs/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/figures/model_b_robustness/brkb_sensitivity.png": "a9836cd13a811b6cc1eaa2ca540fd0314fe66f599fd324eaf6ec1f3f58ae4381",
+    "outputs/release_candidate_manifest.txt": "c285bb13d967d9180e522066782d51b7be7b1e5a5b621f72ce80f30cb8ef440f",
+    "outputs/report/figures/eda_acf_heatmap.png": "7bd1ecbf30c37199e63438e81d4fa89e09fbb70f1bf329eef6e7f2790798f7fc",
+    "outputs/report/figures/eda_activity_distributions.png": "223a0aa6d9ea12e46149be700a4639736f74dea1614c48df784d93331c65e785",
+    "outputs/report/figures/eda_activity_vs_next_day_signed_return.png": "41140f500cfcb9c078ac14e4131c0650cc06d46cdaff89ee037dc5d9c9521baf",
+    "outputs/report/figures/eda_activity_vs_same_day_magnitude.png": "8e19fa1111270829ae7c4091c7122e57e8149916160be7ac2b226fc5a80cc7fa",
+    "outputs/report/figures/eda_indexed_adjusted_close.png": "dd7db2958abcc33ede7a1f2fb1cc124a7c23eed760cac232295efe4330237123",
+    "outputs/report/figures/eda_realized_vol20.png": "948460f0c5b234c49f2925a43bd9bc80fca2c49ab37ec9b5d3694477b7679ff3",
+    "outputs/report/figures/eda_return_distributions.png": "fa816657badd1d85a3d34f27cf0a838ed991df2e4b25815040fce58c87716a05",
+    "outputs/report/README.md": "b5694f719c3f4059a4e5297e439b697fc1f077633d0c19cad9c262fd068e8e0a",
+    "outputs/report/tables/eda_stock_descriptive_statistics.csv": "bfc78af7c874934daf05518416b2f4d4137b9b7ee7c62b01b5407ce6fae2dd76",
+    "outputs/tables/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/tables/corporate_action_return_audit.csv": "5b71e2e80be4a101bc8c26ab80dca31ce0df5362c8fc9cbc7e425f48cd94b28c",
+    "outputs/tables/model_a_acf_pacf.csv": "9726d9b06ac1b16704da41312dc73f6ad34c30511ea13f47f3cb46e90da5ed7d",
+    "outputs/tables/model_a_ar_information_criteria.csv": "a123d4f92ae73f319020049d8b6482180e05055ebdad22af6314daa71f05ce0a",
+    "outputs/tables/model_a_feature_coefficients.csv": "2e3a2590430ca253b73593f1c6a8adb33438da4390ca2a8cfba0c6ee636b9f3f",
+    "outputs/tables/model_a_feature_information_criteria.csv": "517c82aa8e1120a45994caf65c99816e80c72c67f5b5158b1b88decae8021efe",
+    "outputs/tables/model_a_feature_validation_metrics.csv": "e62236e654def478ec337aed65e65eff631542393afaaf7d5459b9eedaa2dbfc",
+    "outputs/tables/model_a_phase2_comparison.csv": "15125f5dbaa0731d3abdb6f0888a49c5d94002db2e865285a9f0da7a0d5d4095",
+    "outputs/tables/model_a_return_diagnostics.csv": "8b4dad1431ce1c16d44a3ebac6064dbcea95e1f81e25aa731b0eb0789af2c498",
+    "outputs/tables/model_a_validation_metrics.csv": "feef4f3e68fb151afe1a4d060d076716892f5ef30d0cb9b24cc96188c1b72b79",
+    "outputs/tables/model_b_abnormal_volume_correlations.csv": "1213022fc21f0d645ad59785565400fe6d5a05abf6a173f6403fe9a670a836d0",
+    "outputs/tables/model_b_baseline_reproduction.csv": "4dea1bfd498c07bebef27428082ce7eff1d4e00ace3703187b1a10db6eeade1b",
+    "outputs/tables/model_b_brkb_contamination_mask.csv": "86108d8b9f961ad4ac4ea11dedb23c325f411f57f51b06c38aa94e60ee9f9ffb",
+    "outputs/tables/model_b_brkb_sensitivity.csv": "8ba8cebf0b422c36a6e2de079b68b8d857b0e9ba07aff0fe3b6f5a784cc02dad",
+    "outputs/tables/model_b_brkb_sensitivity_summary.csv": "9a25155ca88180c73a6ca564e0cc4daa31288c642e28074284eb672fbbc2aeb0",
+    "outputs/tables/model_b_coefficients.csv": "9ee533edadb07c1f2e0c132559ac126b1ec46270211ccf178a7b895678825106",
+    "outputs/tables/model_b_information_criteria.csv": "e15c0d18813534801c242ab2399420d2884760321cdf71198a53cabbc01abded",
+    "outputs/tables/model_b_share_volume_baseline_reproduction.csv": "289cdf7ce034e33acb822eba6049b46d0bafa1dbdf01e3d4e89c8d501e35b6f0",
+    "outputs/tables/model_b_share_volume_coefficients.csv": "0a2d3b86b8ac0ba956595146f8979b3b268bf91dca9527e33c4f5c1009a9a024",
+    "outputs/tables/model_b_share_volume_information_criteria.csv": "09ddb6e8a239fa700c74f71625de46f0012a6df44573be33224d95def14e8e62",
+    "outputs/tables/model_b_share_volume_validation_metrics.csv": "5feefa06b63171720e2c9e7ba2efadaaa8f86c7cc0070936fdc84447ef3c902a",
+    "outputs/tables/model_b_validation_forecasts.csv": "8ce67d02fb90929fe864c4fccbd7f6f59ed79cd81a8bd5546a3763bc229eaf71",
+    "outputs/tables/model_b_validation_metrics.csv": "40acfbf0c9fba3f90e996b893b56a63f0e9fdc878401a731da6ce83d02414d7d",
+    "outputs/tables/model_b_volume_representation_comparison.csv": "94003e975ec9f02126d5cc0142f5536b5d083ec61072465501bb335882b0688c",
+    "outputs/tables/model_b_volume_representation_cross_stock_summary.csv": "0d082358e69cdcb1b54a8e0ea410499facd7d28f705dac5c904bf448ea601345",
+    "outputs/tables/raw_data_audit.csv": "ff716c58f861f9aea2b4c5e7c72e7673f44e4be7a0ae8cefb9cb8b42a8927bda",
+    "outputs/tables/share_volume_split_audit.csv": "1f3ed0b2689f8da8a900c0c71959e1086a11b8abd177f827e6d7c3635f5f74b7",
+    "PROJECT.md": "e6afab8bd7ffba8ada75c52f832e1b4aeb0c225ebd3fc1f9ad4a480bd88d4e7f",
+    "README.md": "42204b5e218478c8d15f77e33825aa12880e1301713667927f12aa768f810229",
+    "requirements.txt": "36477f1bc21bb56638d8695485acd26da482865e45a44e52cf1df96b051349ac",
+    "src/analysis/final_2025_evaluation.py": "f6e43994349dd43e41e682150aedbdd2b53867416bd99b549a590f84d83fb2ff",
+    "src/analysis/final_2025_stock_specific_volume_evaluation.py": "15cc7529171c70e82550e8c71814573a7f34165b2dd8a7944503ec0a57175b62",
+    "src/analysis/model_a_feature_validation.py": "262836bc2c287e81690faf190e44bf82603959a098638ece88dfa11d4e593d5c",
+    "src/analysis/model_a_return_diagnostics.py": "898bef24a21a0365325f38d016d67c2baf8df6db3d928a878923170aa9c85c82",
+    "src/analysis/model_b_brkb_sensitivity.py": "6327a3747d21e0d185f53de21abd7f862e55a0d368f2f391472d82f95d1a84d3",
+    "src/analysis/model_b_share_volume_validation.py": "3fc06653e91b576943b9a9aab9c147471c68344af03f56e1d89a247c0dc1e4ad",
+    "src/analysis/model_b_volume_validation.py": "9fb5414e204707e3d05156f580231b4b4e4c52d1204f764176419b34d249f00b",
+    "src/analysis/report_eda.py": "61394a20a788de4e374c9ef9b0ffe8809348422e30594793c83734d9f2f1d908",
+    "src/data/build_processed_data.py": "f9c49129930472dbeecd3c4db94adbb6efbfd723c73bd7fa184825879b6a7f50",
+    "src/data/download_market_data.py": "ae380844947f39d6d89cf58037ff32c876e720786e7be25d3907c6a986e0d6c2",
+    "src/features/build_model_a_features.py": "c89288b5bdf55ef44f6db5f070c0d914d40243c5a8bf94f4bc789e6439294a96",
+    "src/features/build_model_b_features.py": "a3a75442623405e8ea71d941eaee048286bae0eb908b3399dd4fd3870b91c3de",
+    "src/features/build_share_volume_features.py": "7b20dec5fe64aa14f610cb6a0e40c22aef6c56a3645106bebf150965d869d5b7",
+    "tests/test_final_2025_evaluation.py": "d7022c73ac407ff5c7cca0240f4848ebd1edcc9a59a170c8a8fd6de7d9cfb8bb",
+    "tests/test_model_a_features.py": "0457194664222f6003d6b267dd336a3772f3b5b3110a16236fe8a14a3cd837f1",
+    "tests/test_model_a_return_diagnostics.py": "0d5bc54123b6e9146244766cc715d13bca2221e5962140edb250929686124a54",
+    "tests/test_model_b_features.py": "740d6b7bbb8ce2ec5b58e59dad0a29350e653d1315db97fd7d262d323a4f1d14",
+    "tests/test_output_publication.py": "5a1074a55f4d7b19d947fcab6da094a8a678b4b65a4cc72bc126f0e3ad0986fd",
+    "tests/test_report_index.py": "d2eb8d1fd5e157f7fcd6fe3cd80c5160af335ce54e02cc2795c2dc47da3d99fb",
+    "tests/test_stock_specific_volume_evaluation.py": "d353b82f324f259ef53bf26d49ab6cddd295e374c0466a43433662f80ed41a13",
+    "tests/test_volume_robustness.py": "ac3fafa0d30e2b02ef677e970ca8ce7b869490fb9ad75e2e3e54b8ff9e3c102e"
+  }
+}

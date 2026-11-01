@@ -1,0 +1,13 @@
+display_ticker,yahoo_ticker,company,sector
+NVDA,NVDA,NVIDIA Corporation,Information Technology
+AAPL,AAPL,Apple Inc.,Information Technology
+BRK.B,BRK-B,Berkshire Hathaway Inc. Class B,Financials
+JPM,JPM,JPMorgan Chase & Co.,Financials
+LLY,LLY,Eli Lilly and Company,Health Care
+JNJ,JNJ,Johnson & Johnson,Health Care
+AMZN,AMZN,Amazon.com Inc.,Consumer Discretionary
+TSLA,TSLA,Tesla Inc.,Consumer Discretionary
+CAT,CAT,Caterpillar Inc.,Industrials
+GE,GE,GE Aerospace,Industrials
+XOM,XOM,Exxon Mobil Corporation,Energy
+CVX,CVX,Chevron Corporation,Energy
